@@ -82,3 +82,35 @@ CREATE TABLE userlogs (
 
 -- Re-enable foreign key checks
 SET FOREIGN_KEY_CHECKS = 1;
+-- Insert into Users table
+INSERT INTO Users (name, email, phone_number) VALUES 
+('Vishal Kumar', 'vishal@example.com', '9876543210'),
+('Priyanshu Sharma', 'priyanshu@example.com', '9876543211'),
+('Ankit Verma', 'ankit@example.com', '9876543212'),
+('Amrita Singh', 'amrita@example.com', '9876543213'),
+('Rohan Mehta', 'rohan@example.com', '9876543214');
+
+-- Insert into Products table
+INSERT INTO Products (name, category, price, stock_quantity) VALUES
+('Laptop', 'Electronics', 55000.00, 10),
+('Smartphone', 'Electronics', 20000.00, 25),
+('Headphones', 'Accessories', 1500.00, 50),
+('Keyboard', 'Accessories', 1200.00, 30),
+('Coffee Mug', 'Home & Kitchen', 300.00, 100);
+
+-- Insert into Orders table
+INSERT INTO Orders (user_id, order_date, total_amount) VALUES
+(1, '2025-04-01', 75000.00),
+(2, '2025-04-02', 1500.00),
+(3, '2025-04-03', 20000.00),
+(4, '2025-04-04', 1200.00),
+(5, '2025-04-05', 300.00);
+
+-- Insert into Order_Items table
+INSERT INTO Order_Items (order_id, product_id, quantity, subtotal) VALUES
+(1, 1, 1, 55000.00),
+(1, 2, 1, 20000.00),
+(2, 3, 1, 1500.00),
+(3, 2, 1, 20000.00),
+(4, 4, 1, 1200.00),
+(5, 5, 1, 300.00);
